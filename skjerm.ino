@@ -25,12 +25,15 @@ void setup() {
   lcd.print("      Hei!      ");
   lcd.setCursor(0,1);
   lcd.print("    Velkommen   ");
+  //venter 15 sekunder
   delay(15000);
+  //reset skjerm
   lcd.clear();
 }
-
+//kjører koden
 void loop() {
   lcd.clear();
+  //venter 15 sekunder
   delay(15000);
   //skriver ut lyd-symbol
   lcd.createChar(1,Sound);
@@ -39,6 +42,7 @@ void loop() {
   //skriver ut tekst under symbolet
   lcd.setCursor(0,1);
   lcd.print("Trykk paa meg!");
+  //venter 15 sekunder
   delay(15000);
   //reset skjermen
   lcd.clear();
@@ -46,46 +50,61 @@ void loop() {
   //1. oppgave
   //15 sekund per oppgave
   delay(15000);
+  //skriver ut tekst på første linje
   lcd.begin(16,2);
   lcd.print("   1.OPPGAVE:   ");
+  //skriver ut tekst på andre linje
   lcd.setCursor(0,2);
   lcd.print("Strekk paa beina");
+  //venter 15 sekunder
   delay(15000);
+  //reset skjermen
   lcd.clear();
   
   //skriver ut tekst under symbolet
   lcd.setCursor(0,1);
   lcd.print("Trykk paa meg!");
+  //venter 15 sekunder
   delay(15000);
   //reset skjermen
   lcd.clear();
   
   //2. oppgave
+  //skriver ut tekst på første linje
   lcd.begin(16,2);
   lcd.print("   2.OPPGAVE:   ");
+  //skriver ut tekst på andre linje
   lcd.setCursor(0,2);
   lcd.print(" Ta en dyp pust ");
+  //venter 15 sekunder
   delay(15000);
   lcd.clear(); 
   
   //skriver ut tekst under symbolet
   lcd.setCursor(0,1);
   lcd.print("Trykk paa meg!");
+  //venter 15 sekunder
   delay(15000);
   //reset skjermen
   lcd.clear();
   
   //3. oppgave
+  //skriver ut tekst på første linje
   lcd.begin(16,2);
   lcd.print("   GRATULERER!!   ");
+  //skriver ut tekst på andre linje
   lcd.setCursor(0,2);
   lcd.print("   DU ER STRAALENDE   ");  
+  //venter 15 sekunder
   delay(15000);
+  //reset skjermen
   lcd.clear();
   
   //Når brukeren er ferdig
+  //skriver ut tekst på første linje
   lcd.begin(16,2);
   lcd.print("  GRATULERER!!  ");
+  //skriver ut tekst på andre linje
   lcd.setCursor(0,2);
   lcd.print("DU ER STRAALENDE");
   
