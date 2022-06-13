@@ -131,18 +131,21 @@ void lyd() {
 }
 //metode for varsel-lyd
 void varsel() {
-    tone(buzzer, 1000); 
+    //spiller en tone 
+    tone(buzzer, 1000);
+    //venter 1 sekund
     delay(1000);
   tone(buzzer, 1500); 
     delay(1000);
     tone(buzzer, 2000); 
   delay(1000);
   tone(buzzer, 1500);
-  
+  //slutter å spille lyd
   noTone(10);
 }
 //metode som styrer hvordan lyset skal blinke
  void blinkLys() { 
+  //alle lys skrus på
   digitalWrite(LED1, HIGH);
   digitalWrite(LED2, HIGH);
   digitalWrite(LED3, HIGH);
@@ -151,7 +154,9 @@ void varsel() {
   digitalWrite(LED6, HIGH);
   digitalWrite(LED7, HIGH);
   digitalWrite(LED8, HIGH);
+  //venter 1 sekund
   delay(1000);
+  //alle lys skrus av
   digitalWrite(LED1, LOW);
   digitalWrite(LED2, LOW);
   digitalWrite(LED3, LOW);
@@ -160,7 +165,9 @@ void varsel() {
   digitalWrite(LED6, LOW);
   digitalWrite(LED7, LOW);
   digitalWrite(LED8, LOW);
+  //venter 1 sekund
   delay(1000);
+  //alle lys skrus på
   digitalWrite(LED1, HIGH);
   digitalWrite(LED2, HIGH);
   digitalWrite(LED3, HIGH);
@@ -169,7 +176,9 @@ void varsel() {
   digitalWrite(LED6, HIGH);
   digitalWrite(LED7, HIGH);
   digitalWrite(LED8, HIGH);
+  //venter 1 sekund
   delay(1000);
+  //alle lys skrus av
   digitalWrite(LED1, LOW);
   digitalWrite(LED2, LOW);
   digitalWrite(LED3, LOW);
@@ -178,7 +187,9 @@ void varsel() {
   digitalWrite(LED6, LOW);
   digitalWrite(LED7, LOW);
   digitalWrite(LED8, LOW);
+  //venter 1 sekund
   delay(1000);
+  //alle lys skrus på
   digitalWrite(LED1, HIGH);
   digitalWrite(LED2, HIGH);
   digitalWrite(LED3, HIGH);
@@ -187,7 +198,9 @@ void varsel() {
   digitalWrite(LED6, HIGH);
   digitalWrite(LED7, HIGH);
   digitalWrite(LED8, HIGH);
+  //venter 1 sekund
   delay(1000);
+  //alle lys skrus av
   digitalWrite(LED1, LOW);
   digitalWrite(LED2, LOW);
   digitalWrite(LED3, LOW);
@@ -197,7 +210,7 @@ void varsel() {
   digitalWrite(LED7, LOW);
   digitalWrite(LED8, LOW);
  }
-//aktiverer disse, har bryter på INPUT siden vi skal lese inne signalene
+//aktiverer LED-lys, piezo og bryter på INPUT siden vi skal lese inne signalene
 void setup() {
   pinMode (LED2, OUTPUT);  
   pinMode (LED3, OUTPUT); 
@@ -211,9 +224,11 @@ void setup() {
   pinMode (bryter, INPUT_PULLUP); 
 
 }
+  //arduino kjører
   void loop() {
   //hvis knappen ikke er trykket på
   if (digitalRead(bryter) == LOW) {
+    //venter 3 sekund
     delay(3000);
     //varsler brukeren
     varsel();
